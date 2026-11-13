@@ -36,5 +36,7 @@ const buttons=document.querySelectorAll('.choose'),note=document.getElementById(
 buttons.forEach(button=>button.addEventListener('click',()=>{selectedChoice=button.dataset.choice;document.querySelectorAll('.option').forEach(card=>card.classList.remove('selected'));button.closest('.option').classList.add('selected');choiceText.textContent='Aww, '+selectedChoice+' it is? Copy this and send it back to me ❤️';note.classList.add('show')}));
 copyButton.addEventListener('click',async()=>{const message='My birthday plan choice: '+selectedChoice+' ❤️';try{await navigator.clipboard.writeText(message);copyButton.textContent='Copied! Send it to me ❤️'}catch{copyButton.textContent=message}});
 </script>
+  <script data-goatcounter="https://anurag-webdev.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
